@@ -1,5 +1,6 @@
 package com.demo.scala
 
+import com.demo.scala.construct.Person
 import org.springframework.boot.SpringApplication
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.context.annotation.ImportResource
@@ -14,6 +15,7 @@ object FirstScala {
 
 
   def main(args: Array[String]): Unit = {
+
     println("hello scala")
     val num1: Int = 1
     val num2: Int = 2

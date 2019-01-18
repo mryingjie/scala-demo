@@ -1,4 +1,4 @@
-package com.demo.scala
+package com.demo.scala.homework
 
 /**
   * create by ZhengYingjie on 2019/1/3 17:11

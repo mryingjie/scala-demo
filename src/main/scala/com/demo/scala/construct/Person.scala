@@ -22,10 +22,6 @@ class Person() extends  App {
     val dog = new Dog("jack",18)
     println(dog.age)
     println(name)
-    println(method())
-    val map = new mutable.HashMap()
-    val intToString = new
-        util.HashMap[Int,String]()
   }
 
   def method(): Any ={

@@ -13,6 +13,7 @@ class ListDemo {
     val ints = List(2,3,2)
     println(ints)
 
+    println(ints.map(_*2).sum)
 
     //空集合 Nil    case object Nil extends List[Nothing] {
     val nil = Nil

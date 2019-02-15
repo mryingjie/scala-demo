@@ -44,6 +44,8 @@ class ImplicitDemo {
     d.toInt
   }
 
+  val n:Int = 3.9
+
 }
 
 class MySql(){

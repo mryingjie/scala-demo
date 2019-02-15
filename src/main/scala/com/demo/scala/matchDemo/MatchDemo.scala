@@ -7,6 +7,18 @@ import org.junit._
   */
 class MatchDemo {
 
+
+  /**
+    * 匹配map
+    */
+  @Test
+  def testMapMatch(): Unit ={
+    val map = Map("0"->0,"1"->1,"2"->2)
+    for((k,0) <- map){ //筛选出之为0的k
+      println("K = " + k)
+    }
+  }
+
   /**
     * 匹配元组
     */
@@ -30,12 +42,13 @@ class MatchDemo {
     */
   @Test
   def testListMatch(): Unit ={
-    val arrs = Array(List(0),List(88),List(0,2,1),List(2,1),List(),List(1))
+    val arrs = Array(List(0),List(88),List(0,2,1),List(2,1),List(),List(1),List(2,21,32,12))
 
     for(item <- arrs){
       item match{
         case List(x,y) => println(item  + "匹配到List(x,y) x = " + x + " y = " + y) //类似数组匹配 两个元素的集合
         case 1::Nil => println(item + " 匹配到 1::Nil") //只有一个元素1的集合
+        case x:: y:: z => println(item + s"匹配到x::y::z x=$x y=$y z=$z" ) //3个或3元素以上的集合 z是除了前两个元素以外的剩余元素组成的集合
         case x :: y :: Nil => println(item + "匹配到 x :: y :: Nil") //有两个元素的集合
         case x :: Nil => println(item + "匹配到  x :: Nil") //只有一个元素的集合
         case 0 :: tail => println(item + "匹配到 0 :: tail" + "  tail = "+tail) //以0元素开头的集合
@@ -71,3 +84,5 @@ class MatchDemo {
 
   }
 }
+
+class item{}

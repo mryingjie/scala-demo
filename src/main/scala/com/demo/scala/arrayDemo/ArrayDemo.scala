@@ -78,6 +78,12 @@ class ArrayDemo {
     array(2)(3) = 19
 
     println("array(2)(3) = " + array(2)(3))
+    for (item <- array) {
+      for (i <- item) {
+        print(i + "\t")
+      }
+      println()
+    }
 
   }
 

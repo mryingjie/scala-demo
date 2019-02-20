@@ -17,7 +17,7 @@ object CycleDemo {
         print(s"i = $i, ")
         print(s"j = $j, ")
 //        if (i > 7) {
-//          break()
+          break()
 //        }
         i + j
       }

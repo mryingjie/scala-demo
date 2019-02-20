@@ -85,7 +85,6 @@ class RecursiveDemo {
   /**
     * 递归求阶乘
     */
-
   def getFactoryial(n : Int): Int ={
     if(n == 1) n
     else getFactoryial(n-1) * n

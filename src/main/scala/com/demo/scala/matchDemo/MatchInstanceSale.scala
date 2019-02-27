@@ -18,7 +18,7 @@ class MatchInstanceSale {
       * 打折时按照折扣xx元进行设计.
       * 能够统计出所有捆绑商品打折后的最终价格
       */
-    def getPrice(item: Item): Double ={
+    def getPrice(item: Iteme): Double ={
       item match {
         case Book(_,price) => price
         case Bundle(_,discount,other @ _*) =>{
@@ -72,9 +72,9 @@ class MatchInstanceSale {
 }
 
 
-abstract class Item
-case class Book(desc:String,price:Double) extends Item{
+abstract class Iteme
+case class Book(desc:String,price:Double) extends Iteme{
   var author:String = _
   override def toString: String = s"Book(${desc},$price,$author)"
 }
-case class Bundle(desc:String,discount:Double,item:Item*) extends Item
+case class Bundle(desc:String,discount:Double,item:Iteme*) extends Iteme
